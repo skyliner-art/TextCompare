@@ -10,8 +10,7 @@ def index():
         # 获取用户输入的两个文本
         standard_text = request.form['standard_text']
         test_text = request.form['test_text']
-        print(standard_text)
-        print(test_text)
+
         # 比对文本并返回结果
         diff_result = compareText.compare_texts(standard_text, test_text)
         return render_template('index.html', diff_result=diff_result, standard_text=standard_text, test_text=test_text)

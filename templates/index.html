@@ -19,7 +19,10 @@
 
     {% if diff_result %}
     <h2>比对结果：</h2>
-    <pre>{{ diff_result }}</pre>
+    <label for="standard_text_result">标准文本结果：</label><br>
+    <textarea rows="10" cols="50" readonly>{{ diff_result[0] }}</textarea><br><br>
+    <label for="test_text_result">比对文本结果：</label><br>
+    <textarea rows="10" cols="50" readonly>{{ diff_result[1] }}</textarea><br><br>
     {% endif %}
 </body>
 </html>
