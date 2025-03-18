@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本比对</title>
+</head>
+<body>
+    <h1>文本比对</h1>
+    <form method="POST">
+        <label for="standard_text">标准文本：</label><br>
+        <textarea id="standard_text" name="standard_text" rows="10" cols="50">{{ standard_text }}</textarea><br><br>
+        
+        <label for="test_text">比对文本：</label><br>
+        <textarea id="test_text" name="test_text" rows="10" cols="50">{{ test_text }}</textarea><br><br>
+        
+        <input type="submit" value="比对">
+    </form>
+
+    {% if diff_result %}
+    <h2>比对结果：</h2>
+    <pre>{{ diff_result }}</pre>
+    {% endif %}
+</body>
+</html>
