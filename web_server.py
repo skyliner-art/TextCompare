@@ -18,4 +18,4 @@ def index():
     return render_template('index.html', diff_result=None)
 if __name__ == '__main__':
     webbrowser.open('http://127.0.0.1:5555')
-    app.run(host='127.0.0.1', port=5555, debug=True)
+    app.run(host='127.0.0.1', port=5555, debug=True, use_reloader=False)
